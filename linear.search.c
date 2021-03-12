@@ -1,5 +1,4 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 
 int linear_Search(int array[], int length, int searchElement){
     for (int i = 0; i < length; i++)
@@ -12,20 +11,20 @@ int linear_Search(int array[], int length, int searchElement){
 }
 int main(){
     int length, searchElement;
-    cout << "Enter length of array => ";
-    cin >> length;
+    printf( "Enter length of array => ");
+    scanf("%d", &length);
     int array[length];
-    cout<< "Enter array => ";
+    printf("Enter array => ");
     for (int i = 0; i < length; i++)
     {
-        cin >> array[i];
+        scanf("%d", &array[i]);
     }
-    cout << "Enter search Element => ";
-    cin >> searchElement;
+    printf("Enter search Element => ");
+    scanf("%d", &searchElement);
     int index = linear_Search(array, length, searchElement);
     if(index != -1)
-        cout << " index of array => " << index;
+        printf(" index of array => %d" , index);
     else
-        cout << "item not found  => " <<index;
+        printf("item not found  => %d" ,index);
     return 0;
 }
